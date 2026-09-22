@@ -1,16 +1,76 @@
-# React + Vite
+# Pharma Management System
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Project Description
 
-Currently, two official plugins are available:
+The Pharma Management System is a full-stack web application developed during the Summer Internship at VKR Technologies. The system is designed to digitalize and manage pharmacy operations through separate Admin and Customer portals.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Technologies Used
 
-## React Compiler
+- React.js
+- JavaScript
+- Node.js
+- Express.js
+- MongoDB
+- REST API
+- Axios
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Main Modules
 
-## Expanding the ESLint configuration
+### Admin Module
+- Admin Dashboard
+- Medicine Management
+- Supplier Management
+- Customer Management
+- Order Management
+- Inventory Management
+- Business Reports
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### Customer Module
+- Customer Registration and Login
+- Medicine Search
+- Shopping Cart
+- Checkout
+- Order Placement
+- Order History
+- Prescription Upload
+- Invoice Generation
+
+## Key Features
+
+- Role-based Admin and Customer access
+- Medicine and inventory management
+- Medicine search and availability
+- Customer order management
+- Prescription handling
+- Invoice generation
+- Business reports and analytics
+- REST API-based frontend and backend communication
+- MongoDB database integration
+
+## System Architecture
+
+The application follows a three-tier architecture:
+
+1. **Presentation Layer** – React.js
+2. **Application Layer** – Node.js and Express.js
+3. **Data Layer** – MongoDB
+
+## Project Structure
+
+```text
+Pharma-Management-System/
+│
+├── frontend/
+│   ├── src/
+│   ├── components/
+│   ├── pages/
+│   └── services/
+│
+├── backend/
+│   ├── src/
+│   ├── controllers/
+│   ├── models/
+│   ├── routes/
+│   └── config/
+│
+└── README.md
