@@ -1,0 +1,124 @@
+﻿.profile-page {
+  gap: 22px;
+}
+
+.profile-card {
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  border-radius: 30px;
+  overflow: hidden;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-soft);
+}
+
+.profile-left {
+  padding: 32px;
+  color: #fff;
+  background: linear-gradient(160deg, var(--primary-strong), var(--primary), var(--secondary));
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.profile-left .avatar {
+  width: 128px;
+  height: 128px;
+  border-radius: 32px;
+  display: grid;
+  place-items: center;
+  margin-bottom: 18px;
+  color: var(--primary-strong);
+  font-size: 3rem;
+  font-weight: 800;
+  background: rgba(255, 255, 255, 0.92);
+}
+
+.profile-left h2,
+.profile-left p,
+.profile-right h2,
+.input-group label {
+  margin: 0;
+}
+
+.profile-left p {
+  margin-top: 8px;
+  color: rgba(255, 255, 255, 0.84);
+}
+
+.profile-stats {
+  width: 100%;
+  display: grid;
+  gap: 14px;
+  margin-top: 22px;
+}
+
+.profile-stats .stat {
+  padding: 18px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.14);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+}
+
+.profile-stats .stat svg {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.profile-stats .stat h3,
+.profile-stats .stat span {
+  display: block;
+}
+
+.profile-right {
+  padding: 32px;
+}
+
+.input-group {
+  margin-bottom: 18px;
+}
+
+.input-group label {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.button-group {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.edit-btn,
+.save-btn,
+.cancel-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 0.95rem 1.2rem;
+  border: 0;
+  border-radius: 18px;
+  color: #fff;
+  font-weight: 700;
+}
+
+.edit-btn,
+.save-btn {
+  background: linear-gradient(135deg, var(--primary), var(--primary-strong));
+}
+
+.cancel-btn {
+  background: linear-gradient(135deg, var(--danger), var(--danger-strong));
+}
+
+@media (max-width: 920px) {
+  .profile-card {
+    grid-template-columns: 1fr;
+  }
+}

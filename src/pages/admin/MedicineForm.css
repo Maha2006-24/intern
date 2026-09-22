@@ -1,0 +1,58 @@
+﻿.medicine-form-page {
+  min-height: calc(100vh - 150px);
+  display: grid;
+  place-items: center;
+  padding: 12px 0;
+}
+
+.medicine-form-card {
+  width: min(680px, 100%);
+  padding: 32px;
+  border-radius: 28px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-soft);
+}
+
+.medicine-form-card h1,
+.medicine-form-card p,
+.medicine-form-card label {
+  margin: 0;
+}
+
+.medicine-form-card h1 {
+  font-family: var(--font-display);
+}
+
+.medicine-form-card p {
+  margin-top: 8px;
+  color: var(--muted);
+}
+
+.medicine-form-card form {
+  display: grid;
+  gap: 14px;
+  margin-top: 24px;
+}
+
+.medicine-form-card label {
+  font-weight: 700;
+}
+
+.save-btn {
+  margin-top: 10px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  border: 0;
+  border-radius: 18px;
+  padding: 1rem 1.2rem;
+  color: #fff;
+  font-weight: 800;
+  background: linear-gradient(135deg, var(--primary), var(--primary-strong));
+}
+
+.save-btn:disabled {
+  opacity: 0.78;
+  cursor: not-allowed;
+}

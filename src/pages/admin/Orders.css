@@ -1,0 +1,26 @@
+﻿.orders-page {
+  gap: 22px;
+}
+
+.orders-toolbar {
+  display: flex;
+}
+
+.order-search {
+  max-width: 420px;
+  min-height: 58px;
+}
+
+.orders-table-panel {
+  padding: 10px;
+}
+
+.orders-table select {
+  min-width: 150px;
+}
+
+.orders-empty {
+  text-align: center;
+  padding: 42px 18px;
+  color: var(--muted);
+}

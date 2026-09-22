@@ -1,0 +1,567 @@
+﻿/* ===============================
+   PAGE
+================================= */
+
+.medicine-page{
+    padding:35px;
+    min-height:100vh;
+    background:linear-gradient(135deg,#eef6ff,#dff2ff);
+}
+
+/* ===============================
+   HERO
+================================= */
+
+.hero-card{
+    background:#fff;
+    border-radius:28px;
+    padding:38px;
+    box-shadow:0 18px 45px rgba(0,90,180,.12);
+    margin-bottom:35px;
+}
+
+.hero-badge{
+    display:inline-block;
+    padding:10px 18px;
+    background:#dfe9ff;
+    color:#2456c5;
+    font-weight:700;
+    border-radius:40px;
+    text-transform:uppercase;
+    letter-spacing:2px;
+    font-size:13px;
+}
+
+.hero-card h1{
+    margin-top:14px;
+    font-size:48px;
+    color:#17233d;
+    font-weight:800;
+}
+
+.hero-card p{
+    margin-top:8px;
+    color:#5b6f8b;
+    font-size:22px;
+}
+
+/* ===============================
+   SEARCH
+================================= */
+
+.search-box{
+    margin-top:30px;
+    display:flex;
+    align-items:center;
+    gap:15px;
+    background:#fff;
+    border:2px solid #d9e7ff;
+    border-radius:20px;
+    padding:18px 22px;
+    transition:.3s;
+}
+
+.search-box:hover{
+    border-color:#3b82f6;
+    box-shadow:0 8px 20px rgba(59,130,246,.18);
+}
+
+.search-box svg{
+    font-size:24px;
+    color:#2563eb;
+}
+
+.search-box input{
+    flex:1;
+    border:none;
+    outline:none;
+    font-size:22px;
+    background:transparent;
+    color:#23304d;
+}
+
+/* ===============================
+   GRID
+================================= */
+
+.medicine-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+    gap:28px;
+}
+
+/* ===============================
+   CARD
+================================= */
+
+.medicine-card{
+    background:#fff;
+    border-radius:24px;
+    padding:28px;
+    transition:.35s;
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+    display:flex;
+    flex-direction:column;
+}
+
+.medicine-card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 22px 40px rgba(37,99,235,.22);
+}
+
+/* ===============================
+   TOP ROW
+================================= */
+
+.top-row{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:20px;
+}
+
+.icon-box{
+    width:88px;
+    height:88px;
+    border-radius:24px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:#dce8ff;
+}
+
+.icon-box svg{
+    color:#2563eb;
+    font-size:42px;
+}
+
+/* ===============================
+   TITLE
+================================= */
+
+.medicine-card h2{
+    font-size:34px;
+    margin-bottom:12px;
+    color:#18243f;
+}
+
+.category{
+    display:inline-block;
+    background:#edf4ff;
+    color:#2563eb;
+    font-weight:600;
+    padding:7px 16px;
+    border-radius:30px;
+    width:max-content;
+    margin-bottom:18px;
+}
+/* ===============================
+   PRICE
+================================= */
+
+.price{
+    margin-top:18px;
+    margin-bottom:16px;
+    font-size:34px;
+    font-weight:800;
+    color:#2563eb;
+}
+
+/* ===============================
+   DESCRIPTION
+================================= */
+
+.description{
+    margin-top:10px;
+    color:#6b7280;
+    font-size:16px;
+    line-height:1.7;
+    min-height:70px;
+}
+
+/* ===============================
+   STOCK BADGES
+================================= */
+
+.stock{
+    padding:8px 16px;
+    border-radius:30px;
+    font-size:14px;
+    font-weight:700;
+    color:#fff;
+}
+
+.stock.good{
+    background:#22c55e;
+}
+
+.stock.low{
+    background:#f59e0b;
+}
+
+.stock.out{
+    background:#ef4444;
+}
+
+/* ===============================
+   BUTTON AREA
+================================= */
+
+.card-buttons{
+    display:flex;
+    gap:15px;
+    margin-top:auto;
+    padding-top:20px;
+}
+
+/* ===============================
+   VIEW BUTTON
+================================= */
+
+.view-btn{
+    flex:1;
+    height:52px;
+    border:none;
+    border-radius:14px;
+    background:#f3f6fc;
+    color:#1f2937;
+    font-size:16px;
+    font-weight:700;
+    cursor:pointer;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:10px;
+    transition:.3s;
+}
+
+.view-btn:hover{
+    background:#dbeafe;
+    color:#2563eb;
+    transform:translateY(-3px);
+}
+
+/* ===============================
+   CART BUTTON
+================================= */
+
+.cart-btn{
+    flex:1;
+    height:52px;
+    border:none;
+    border-radius:14px;
+    background:linear-gradient(135deg,#2563eb,#1d4ed8);
+    color:#fff;
+    font-size:16px;
+    font-weight:700;
+    cursor:pointer;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:10px;
+    transition:.3s;
+}
+
+.cart-btn:hover:not(:disabled){
+    transform:translateY(-3px);
+    box-shadow:0 10px 20px rgba(37,99,235,.35);
+}
+
+.cart-btn:disabled{
+    background:#cbd5e1;
+    cursor:not-allowed;
+    box-shadow:none;
+}
+
+/* ===============================
+   EMPTY STATE
+================================= */
+
+.empty-box{
+    width:100%;
+    background:#fff;
+    padding:60px;
+    border-radius:24px;
+    text-align:center;
+    font-size:22px;
+    color:#64748b;
+    box-shadow:0 12px 30px rgba(0,0,0,.08);
+}
+
+/* ===============================
+   LOADING
+================================= */
+
+.loading{
+    text-align:center;
+    font-size:24px;
+    color:#2563eb;
+    padding:80px 0;
+    font-weight:700;
+}
+/* ===========================================
+   RESPONSIVE
+=========================================== */
+
+@media (max-width:1200px){
+
+    .medicine-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+}
+
+@media (max-width:768px){
+
+    .medicine-page{
+        padding:20px;
+    }
+
+    .hero-card{
+        padding:25px;
+    }
+
+    .hero-card h1{
+        font-size:34px;
+    }
+
+    .hero-card p{
+        font-size:17px;
+    }
+
+    .medicine-grid{
+        grid-template-columns:1fr;
+    }
+
+    .medicine-card{
+        padding:22px;
+    }
+
+    .medicine-card h2{
+        font-size:28px;
+    }
+
+    .price{
+        font-size:28px;
+    }
+
+    .card-buttons{
+        flex-direction:column;
+    }
+
+    .view-btn,
+    .cart-btn{
+        width:100%;
+    }
+
+}
+
+@media (max-width:480px){
+
+    .hero-card{
+        padding:20px;
+    }
+
+    .hero-card h1{
+        font-size:28px;
+    }
+
+    .search-box{
+        padding:14px 16px;
+    }
+
+    .search-box input{
+        font-size:16px;
+    }
+
+    .medicine-card{
+        border-radius:18px;
+    }
+
+    .icon-box{
+        width:70px;
+        height:70px;
+    }
+
+    .icon-box svg{
+        font-size:34px;
+    }
+
+}
+
+/* ===========================================
+   ANIMATIONS
+=========================================== */
+
+@keyframes fadeUp{
+
+    from{
+        opacity:0;
+        transform:translateY(25px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+
+}
+
+@keyframes pulseGlow{
+
+    0%{
+        box-shadow:0 0 0 rgba(37,99,235,.2);
+    }
+
+    50%{
+        box-shadow:0 0 30px rgba(37,99,235,.25);
+    }
+
+    100%{
+        box-shadow:0 0 0 rgba(37,99,235,.2);
+    }
+
+}
+
+.hero-card{
+    animation:fadeUp .8s ease;
+}
+
+.medicine-card{
+    animation:fadeUp .6s ease;
+}
+
+.search-box:focus-within{
+    border-color:#2563eb;
+    animation:pulseGlow 1.5s infinite;
+}
+
+/* ===========================================
+   SCROLLBAR
+=========================================== */
+
+::-webkit-scrollbar{
+    width:10px;
+}
+
+::-webkit-scrollbar-track{
+    background:#edf2ff;
+}
+
+::-webkit-scrollbar-thumb{
+    background:#2563eb;
+    border-radius:20px;
+}
+
+::-webkit-scrollbar-thumb:hover{
+    background:#1d4ed8;
+}
+
+/* ===========================================
+   CARD EFFECTS
+=========================================== */
+
+.medicine-card{
+    position:relative;
+    overflow:hidden;
+}
+
+.medicine-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    left:-100%;
+
+    width:100%;
+
+    height:100%;
+
+    background:linear-gradient(
+        120deg,
+        transparent,
+        rgba(255,255,255,.45),
+        transparent
+    );
+
+    transition:.8s;
+
+}
+
+.medicine-card:hover::before{
+
+    left:120%;
+
+}
+
+/* ===========================================
+   BUTTON EFFECT
+=========================================== */
+
+.view-btn,
+.cart-btn{
+    position:relative;
+    overflow:hidden;
+}
+
+.view-btn::after,
+.cart-btn::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:0;
+
+    height:0;
+
+    background:rgba(255,255,255,.3);
+
+    border-radius:50%;
+
+    top:50%;
+
+    left:50%;
+
+    transform:translate(-50%,-50%);
+
+    transition:.5s;
+
+}
+
+.view-btn:hover::after,
+.cart-btn:hover::after{
+
+    width:300px;
+
+    height:300px;
+
+}
+
+/* ===========================================
+   GLASS EFFECT
+=========================================== */
+
+.hero-card,
+.medicine-card{
+
+    backdrop-filter:blur(18px);
+
+    -webkit-backdrop-filter:blur(18px);
+
+}
+
+/* ===========================================
+   SMOOTH TRANSITIONS
+=========================================== */
+
+*{
+    transition:
+    background .3s,
+    color .3s,
+    transform .3s,
+    box-shadow .3s;
+}

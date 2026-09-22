@@ -1,0 +1,22 @@
+{
+  "medicines": [
+    { "id": "m-101", "name": "Paracetamol", "price": 45, "stock": 120 },
+    { "id": "m-102", "name": "Cough Syrup", "price": 180, "stock": 60 },
+    { "id": "m-103", "name": "Vitamin C", "price": 250, "stock": 90 }
+  ],
+  "customers": [
+    { "id": "c-101", "name": "Anjali", "email": "anjali@example.com" },
+    { "id": "c-102", "name": "Rahul", "email": "rahul@example.com" }
+  ],
+  "suppliers": [
+    { "id": "s-101", "name": "HealthPlus Labs", "city": "Chennai" },
+    { "id": "s-102", "name": "MediCare Pvt Ltd", "city": "Bengaluru" }
+  ],
+  "orders": [
+    { "id": "o-101", "customer": "Anjali", "total": 420, "status": "Pending" },
+    { "id": "o-102", "customer": "Rahul", "total": 180, "status": "Delivered" }
+  ],
+  "cart": [
+    { "id": "m-101", "name": "Paracetamol", "price": 45, "quantity": 2 }
+  ]
+}

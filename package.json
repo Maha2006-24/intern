@@ -1,0 +1,24 @@
+{
+  "name": "pharma-workspace",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "npm --prefix backend run start",
+    "dev": "vite",
+    "build": "vite build"
+  },
+  "dependencies": {
+    "jspdf": "^4.2.1",
+    "jspdf-autotable": "^5.0.8",
+    "react": "^19.2.7",
+    "react-dom": "^19.2.7",
+    "react-icons": "^5.7.0",
+    "react-qr-code": "^2.2.0",
+    "react-router-dom": "^7.18.1"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^6.0.3",
+    "eslint": "^10.7.0",
+    "vite": "^8.1.4"
+  }
+}
