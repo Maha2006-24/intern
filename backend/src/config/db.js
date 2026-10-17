@@ -1,29 +1,45 @@
+
 import mongoose from 'mongoose';
 import dotenv from 'dotenv';
 import { seedDatabaseIfEmpty } from '../data/seedDatabase.js';
 
 dotenv.config();
 
-const MONGODB_URI = process.env.MONGODB_URI || 'mongodb://127.0.0.1:27017/pharma-erp';
-let mongoConnected = false;
+let connectionPromise;
 
 async function connectDB() {
-  try {
-    await mongoose.connect(MONGODB_URI, {
-      serverSelectionTimeoutMS: 5000,
-    });
-    await seedDatabaseIfEmpty();
-    mongoConnected = true;
-    console.log('MongoDB connected');
-  } catch (error) {
-    mongoConnected = false;
-    console.warn(`MongoDB connection failed: ${error.message}`);
-    console.warn('Falling back to backend/db.json data.');
+  if (mongoose.connection.readyState === 1) {
+    return mongoose.connection;
   }
+
+  if (!process.env.MONGODB_URI) {
+    throw new Error('MONGODB_URI environment variable is missing');
+  }
+
+  if (!connectionPromise) {
+    connectionPromise = (async () => {
+      try {
+        await mongoose.connect(process.env.MONGODB_URI, {
+          serverSelectionTimeoutMS: 10000,
+        });
+
+        await seedDatabaseIfEmpty();
+
+        console.log('MongoDB connected successfully');
+        return mongoose.connection;
+      } catch (error) {
+        connectionPromise = null;
+        console.error('MongoDB connection failed:', error.message);
+        throw error;
+      }
+    })();
+  }
+
+  return connectionPromise;
 }
 
 function isMongoConnected() {
-  return mongoConnected && mongoose.connection.readyState === 1;
+  return mongoose.connection.readyState === 1;
 }
 
 export default connectDB;
